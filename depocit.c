@@ -10,6 +10,32 @@ int check(int day, int summa)
 	}
 	return 0;
 }
+float calc(int day, int summa)
+{	
+	if(day < 31) 
+		return summa * 0.9;
+	if(summa < 100000) {
+		if((day > 30) && (day < 121))
+			return summa * 1.02;
+
+		if((day > 120) && (day < 241))
+			return summa * 1.06;
+
+		if((day > 240) && (day < 366))
+			return summa * 1.12;
+	}
+	if(summa >= 100000) {
+		if((day > 30) && (day < 121))
+			return summa * 1.03;
+
+		if((day > 120) && (day < 241))
+			return summa * 1.08;
+
+		if((day > 240) && (day < 366))
+			return summa * 1.15;
+	}
+	return 0;
+}
 int main()
 {
 	int day, summa, select;
@@ -33,6 +59,7 @@ int main()
 		}
 		else return 0;
 	}
-			
+	printf("The deposit amount at the time of expiry: %.3f\n", calc(day, summa));	
+	
 	return 0;
 }
