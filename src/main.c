@@ -1,11 +1,11 @@
 #include <stdio.h>
-#include "depocit.h"
+#include "deposit.h"
 
 int main()
 {
 	int day, summa, select;
 	
-	printf("Enter the term of the deposit: ");
+	printf("Enter the term of the deposit:  ");
 	scanf("%d", &day);
 
 	printf("Enter the deposit amount: ");

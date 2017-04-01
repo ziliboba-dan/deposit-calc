@@ -1,4 +1,4 @@
-#include "depocit.h"
+#include "deposit.h"
 #include <stdio.h>
 
 int check(int day, int summa)
