@@ -1,7 +1,7 @@
-#include <ctest.h>
+#include "ctest.h"
 #include "deposit.h"
 
-CTEST(check, wrong_sum_day)
+CTEST(check_test, wrong_sum_day)
 {
     // Given
     const int day = 366;
@@ -15,21 +15,7 @@ CTEST(check, wrong_sum_day)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check, wrong_sum)
-{
-    // Given
-    const int day = 365;
-    const int summa = 2;
-
-    // When
-    const int result = check(day, summa);
-
-    // Then
-    const int expected = -1;
-    ASSERT_EQUAL(expected, result);
-}
-
-CTEST(check, wrong_day)
+CTEST(check_test, wrong_day)
 {
     // Given
     const int day = -1;
@@ -43,7 +29,7 @@ CTEST(check, wrong_day)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check, wrong_sum)
+CTEST(check_test, wrong_sum)
 {
     // Given
     const int day = 265;
@@ -57,7 +43,7 @@ CTEST(check, wrong_sum)
     ASSERT_EQUAL(expected, result);
 }
 
-CTEST(check, wrong_no)
+CTEST(check_test, wrong_no)
 {
     // Given
     const int day = 360;

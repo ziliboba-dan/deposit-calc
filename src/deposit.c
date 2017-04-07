@@ -12,11 +12,11 @@ int check(int day, int summa)
 	return 0;
 }
 
-float calc(int day, int summa)
+double calc(int day, int summa)
 {	
 	if (day < 31) 
 		return summa * 0.9;
-	if (summa < 100000) {
+	if (summa <= 100000) {
 		if((day > 30) && (day < 121))
 			return summa * 1.02;
 
@@ -26,7 +26,7 @@ float calc(int day, int summa)
 		if((day > 240) && (day < 366))
 			return summa * 1.12;
 	}
-	if (summa >= 100000) {
+	if (summa > 100000) {
 		if((day > 30) && (day < 121))
 			return summa * 1.03;
 
