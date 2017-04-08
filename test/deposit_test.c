@@ -2,7 +2,7 @@
 #include "deposit.h"
 
 // Whem summa = 99999
-int summa = 99999;
+const int summa = 99999;
 
 CTEST(calc, day29_summa99999)
 {
@@ -73,7 +73,7 @@ CTEST(calc, day365_summa99999)
 }
 
 // Whem summa = 100000
-int summa1 = 100000;
+const int summa1 = 100000;
 
 CTEST(calc, day29_summa100000)
 {
@@ -144,7 +144,7 @@ CTEST(calc, day365_summa100000)
 }
 
 // Whem summa = 100001
-int summa2 = 100001;
+const int summa2 = 100001;
 
 CTEST(calc, day29_summa100001)
 {

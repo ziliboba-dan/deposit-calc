@@ -1,4 +1,4 @@
-all:deposit-calc deposit-calc-test
+all: bin/deposit-calc bin/deposit-calc-test 
 
 .PHONY: clean
 
@@ -6,7 +6,7 @@ clean:
 	rm -rf build/src/*.o build/test/*.o
 	rm -rf bin/*
 
-deposit-calc: build/src/deposit.o build/src/main.o
+bin/deposit-calc: build/src/deposit.o build/src/main.o
 	gcc build/src/main.o build/src/deposit.o -o bin/deposit-calc 
 
 build/src/main.o: src/main.c src/deposit.h
@@ -15,7 +15,7 @@ build/src/main.o: src/main.c src/deposit.h
 build/src/deposit.o: src/deposit.c src/deposit.h
 	gcc -Wall -Werror -c src/deposit.c -o build/src/deposit.o
 
-deposit-calc-test: build/test/deposit_test.o build/test/main.o build/test/validation_test.o
+bin/deposit-calc-test: build/test/deposit_test.o build/test/main.o build/test/validation_test.o
 	gcc build/src/deposit.o build/test/deposit_test.o build/test/main.o build/test/validation_test.o -o bin/deposit-calc-test
 
 build/test/deposit_test.o: test/deposit_test.c 
@@ -27,6 +27,7 @@ build/test/main.o: test/main.c
 build/test/validation_test.o: test/validation_test.c 
 	gcc -Wall -Werror -I thirdparty -I src -c test/validation_test.c -o build/test/validation_test.o
 
+.PHONY: test
 
-
-	
+test: 
+	bin/./deposit-calc-test	
