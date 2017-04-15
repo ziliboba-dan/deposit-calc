@@ -8,4 +8,5 @@ branches:
 compiler:
   - gcc
 install: true
+
 script: make test 
