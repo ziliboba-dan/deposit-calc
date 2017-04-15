@@ -1,0 +1,11 @@
+os:
+  - linux
+language: c
+sudo: false
+branches:
+ only:
+ - develop
+compiler:
+  - gcc
+install: true
+script: make test 
