@@ -10,5 +10,5 @@ compiler:
 install: true
 
 script:
- -make 
- -make test 
+ - make 
+ - make test 
