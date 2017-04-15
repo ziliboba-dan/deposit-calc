@@ -11,7 +11,7 @@ CTEST(check_test, wrong_sum_day)
     const int result = check(day, summa);
 
     // Then
-    const int expected = -1;
+    const int expected = 10;
     ASSERT_EQUAL(expected, result);
 }
 
