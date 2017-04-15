@@ -30,3 +30,4 @@ build/test/validation_test.o: test/validation_test.c
 .PHONY: test
 
 test: bin/deposit-calc-test		
+	bin/deposit-calc-test
